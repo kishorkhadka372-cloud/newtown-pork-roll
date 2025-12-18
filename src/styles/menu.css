@@ -1,0 +1,83 @@
+/* ================= MENU PAGE ================= */
+
+.menuHeader{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.menuHeader h1{
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.menuHeader p{
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* ===== Sections ===== */
+
+.menuSection{
+  margin-bottom: 60px;
+}
+
+.menuSection h2{
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--red);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* ===== Menu List ===== */
+
+.menuList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.menuItem:last-child{
+  border-bottom: none;
+}
+
+.menuItem__name{
+  font-weight: 600;
+}
+
+.menuItem__price{
+  font-weight: 800;
+  color: var(--red);
+}
+
+/* ===== CTA ===== */
+
+.menuCTA{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.menuCTA p{
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px){
+  .menuHeader h1{
+    font-size: 36px;
+  }
+
+  .menuSection h2{
+    font-size: 22px;
+  }
+}

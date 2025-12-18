@@ -1,0 +1,352 @@
+/* Give pages room under fixed navbar */
+.page{
+  padding-top: 92px;
+}
+
+/* Footer */
+.footer{
+  margin-top: 60px;
+  background: #0b0b0d;
+  color: rgba(255,255,255,.88);
+  padding: 44px 0 16px;
+}
+
+.footer__inner{
+  width: min(var(--max), calc(100% - 2*var(--pad)));
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr 0.9fr;
+  gap: 18px;
+  padding-bottom: 22px;
+}
+
+.footer__title{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.footer__head{
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.footer__muted{
+  color: rgba(255,255,255,.70);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.footer__link{
+  display:block;
+  color: rgba(255,255,255,.80);
+  margin-top: 8px;
+}
+.footer__link:hover{ color:#fff; }
+
+.footer__row{
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.footer__btn{
+  display:inline-flex;
+  justify-content:center;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: var(--red);
+  color:#fff;
+  font-weight: 900;
+  border: 1px solid var(--red);
+}
+.footer__btn:hover{ background: var(--redDark); }
+
+.footer__bottom{
+  width: min(var(--max), calc(100% - 2*var(--pad)));
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 980px){
+  .footer__inner{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px){
+  .footer__inner{ grid-template-columns: 1fr; }
+}
+/* ================= GALLERY PAGE ================= */
+
+.galleryHeader{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .galleryHeader h1{
+    font-size: 48px;
+    margin-bottom: 8px;
+  }
+  
+  .galleryHeader p{
+    color: var(--muted);
+  }
+  
+  /* ===== Gallery Grid ===== */
+  
+  .galleryGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .galleryItem{
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #eee;
+  }
+  
+  .galleryItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+  }
+  
+  .galleryItem:hover img{
+    transform: scale(1.05);
+  }
+  
+  /* ===== Responsive ===== */
+  
+  @media (max-width: 600px){
+    .galleryHeader h1{
+      font-size: 36px;
+    }
+  }
+/* ================= ABOUT PAGE ================= */
+
+.aboutHeader{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .aboutHeader h1{
+    font-size: 48px;
+    margin-bottom: 8px;
+  }
+  
+  .aboutHeader p{
+    color: var(--muted);
+  }
+  
+  /* ===== Content Layout ===== */
+  
+  .aboutContent{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .aboutText h2{
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  
+  .aboutText p{
+    margin-bottom: 14px;
+    color: #333;
+    line-height: 1.65;
+  }
+  
+  .aboutHighlight{
+    margin-top: 26px;
+    padding: 18px 22px;
+    background: var(--soft);
+    border-left: 4px solid var(--red);
+    border-radius: var(--radius);
+  }
+  
+  .aboutHighlight p{
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* ===== Image ===== */
+  
+  .aboutImage{
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* ===== Responsive ===== */
+  
+  @media (max-width: 900px){
+    .aboutContent{
+      grid-template-columns: 1fr;
+    }
+  
+    .aboutHeader h1{
+      font-size: 36px;
+    }
+  }
+/* ================= CONTACT PAGE ================= */
+
+.contactHeader{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .contactHeader h1{
+    font-size: 48px;
+    margin-bottom: 8px;
+  }
+  
+  .contactHeader p{
+    color: var(--muted);
+  }
+  
+  /* Layout */
+  .contactGrid{
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 26px;
+    align-items: start;
+  }
+  
+  .contactCard{
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+  }
+  
+  .contactCard h2{
+    margin: 0 0 18px;
+    font-size: 24px;
+  }
+  
+  .contactRow{
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+  }
+  
+  .contactRow:last-of-type{
+    border-bottom: none;
+  }
+  
+  .contactLabel{
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  
+  .contactValue{
+    font-weight: 650;
+    color: #222;
+  }
+  
+  .contactLink{
+    color: var(--red);
+    font-weight: 900;
+  }
+  
+  .contactActions{
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  /* Hours */
+  .hoursBox{
+    margin-top: 22px;
+    background: var(--soft);
+    border-radius: var(--radius);
+    padding: 18px;
+    border-left: 4px solid var(--red);
+  }
+  
+  .hoursBox h3{
+    margin: 0 0 12px;
+    font-size: 16px;
+  }
+  
+  .hoursGrid{
+    display: grid;
+    gap: 8px;
+  }
+  
+  .hoursRow{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .hoursDay{
+    color: #222;
+    font-weight: 700;
+  }
+  
+  .hoursTime{
+    color: #222;
+    font-weight: 650;
+  }
+  
+  .hoursTime.isClosed{
+    color: var(--muted);
+    font-weight: 800;
+  }
+  
+  /* Map */
+  .mapCard{
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    min-height: 520px;
+  }
+  
+  .mapCard iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    min-height: 520px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px){
+    .contactGrid{
+      grid-template-columns: 1fr;
+    }
+  
+    .contactHeader h1{
+      font-size: 36px;
+    }
+  
+    .mapCard,
+    .mapCard iframe{
+      min-height: 420px;
+    }
+  }
+      

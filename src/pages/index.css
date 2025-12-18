@@ -1,0 +1,6 @@
+/* Global CSS entry point */
+@import "./styles/base.css";
+@import "./styles/navbar.css";
+@import "./styles/pages.css";
+@import "./styles/home.css";
+@import "./styles/menu.css";
